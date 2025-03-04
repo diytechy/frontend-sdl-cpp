@@ -50,10 +50,6 @@ jobs:
           cmake --build "${{ github.workspace }}/cmake-build-frontend-sdl2" --parallel --config Release
           cmake --install "${{ github.workspace }}/cmake-build-frontend-sdl2" --config Release
           dir install-frontend-sdl2
-       
-      - name: version
-        # run: echo "::set-output name=version::$(./bin/azblogfilter --version)"
-        id: version
         
       - name: release
         uses: actions/create-release@v1
