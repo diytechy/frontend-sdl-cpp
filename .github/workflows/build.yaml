@@ -62,7 +62,7 @@ jobs:
 
   build-windows:
     name: Windows, x64
-    runs-on: self-hosted
+    runs-on: windows-latest
 
     steps:
       - name: Export GitHub Actions cache environment variables
