@@ -9,15 +9,9 @@ jobs:
 
   build-windows:
     name: Windows, x64
-    runs-on: self-hosted
+    runs-on: windows-latest
 
     steps:
-      - name: 'Cleanup build folder'
-        run: |
-          ls -la ./
-          rm -rf ./* || true
-          rm -rf ./.??* || true
-          ls -la ./
       - name: Export GitHub Actions cache environment variables
         uses: actions/github-script@v6
         with:
