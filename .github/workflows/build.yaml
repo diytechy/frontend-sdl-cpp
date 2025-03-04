@@ -50,7 +50,7 @@ jobs:
           cmake --build "${{ github.workspace }}/cmake-build-frontend-sdl2" --parallel --config Release
           cmake --install "${{ github.workspace }}/cmake-build-frontend-sdl2" --config Release
           #copy NUL install-frontend-sdl2\changelog.md
-          echo "" > install-frontend-sdl2\changelog.md
+          echo "" > "D:\a\frontend-sdl-cpp\frontend-sdl-cpp\CHANGELOG.md"
           #echo.> install-frontend-sdl2\changelog.md
           dir install-frontend-sdl2
           
