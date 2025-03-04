@@ -49,7 +49,8 @@ jobs:
           cmake -G "Visual Studio 17 2022" -A "X64" -S "${{ github.workspace }}/frontend-sdl2" -B "${{ github.workspace }}/cmake-build-frontend-sdl2" -DCMAKE_TOOLCHAIN_FILE="${Env:VCPKG_INSTALLATION_ROOT}/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=x64-windows-static  -DCMAKE_PREFIX_PATH="${{ github.workspace }}/install-libprojectm" -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}/install-frontend-sdl2" -DCMAKE_MSVC_RUNTIME_LIBRARY="MultiThreaded$<$<CONFIG:Debug>:Debug>" -DCMAKE_VERBOSE_MAKEFILE=YES -DSDL2_LINKAGE=static -DBUILD_TESTING=YES
           cmake --build "${{ github.workspace }}/cmake-build-frontend-sdl2" --parallel --config Release
           cmake --install "${{ github.workspace }}/cmake-build-frontend-sdl2" --config Release
-          copy NUL install-frontend-sdl2\changelog.md
+          #copy NUL install-frontend-sdl2\changelog.md
+          echo "" > install-frontend-sdl2\changelog.md
           #echo.> install-frontend-sdl2\changelog.md
           dir install-frontend-sdl2
           
