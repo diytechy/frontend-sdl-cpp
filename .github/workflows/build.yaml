@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: 'Cleanup build folder'
-        run: del * /S /Q
+        run: del /S /Q *
       - name: Export GitHub Actions cache environment variables
         uses: actions/github-script@v6
         with:
