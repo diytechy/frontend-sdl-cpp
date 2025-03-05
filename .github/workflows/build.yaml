@@ -22,7 +22,7 @@ jobs:
       - name: Checkout libprojectM Sources
         uses: actions/checkout@v4
         with:
-          repository: projectM-visualizer/projectm
+          repository: diytechy/projectm
           path: projectm
           submodules: recursive
 
