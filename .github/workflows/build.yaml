@@ -54,6 +54,23 @@ jobs:
           #echo.> install-frontend-sdl2\changelog.md
           dir install-frontend-sdl2
           
+      - name: package windows artifact
+        uses: actions/upload-artifact@v4
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: install-frontend-sdl2
+          asset_name: dirout.zip
+          asset_content_type: application/zip
+          
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: my_file.txt
+          retention-days: 5
+          
       - name: release
         uses: actions/create-release@v1
         id: create_release
